@@ -1,12 +1,22 @@
 <head>
-<title>Operating System Version</title>
+<title>Octo Git</title>
 <HTA:APPLICATION 
-     APPLICATIONNAME="Operating System Version"
-     SCROLL="yes"
-     SINGLEINSTANCE="yes"
+     APPLICATIONNAME="Octo Git"
+	SCROLL="no"
+	MAXIMIZEBUTTON="no"
+	MINIMIZEBUTTON="no"
 >
+<SCRIPT LANGUAGE="VBScript">
+
+    Sub Window_onLoad
+	
+        window.resizeTo 200,100
+
+    End Sub 
+
+</SCRIPT>
 </head>
-<body>      
+<body bgcolor="black">      
 <form>
 <INPUT TYPE="Button" NAME="commit" VALUE="Commit">
 <INPUT TYPE="Button" NAME="pull" VALUE="Pull">
