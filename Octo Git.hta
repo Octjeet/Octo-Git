@@ -8,11 +8,18 @@
 </head>
 <body>      
 <form>
-<INPUT TYPE="Button" NAME="Commit" VALUE="commit">
+<INPUT TYPE="Button" NAME="commit" VALUE="Commit">
+<INPUT TYPE="Button" NAME="pull" VALUE="Pull">
+
+</form>
 
       <SCRIPT FOR="commit" EVENT="onClick" LANGUAGE="VBScript">
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "commit.bat"
       </SCRIPT>
-</form>
+
+      <SCRIPT FOR="pull" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "pull.bat"
+      </SCRIPT>
 </body>
