@@ -2,7 +2,7 @@
 echo type "commit" "pull" "exit"
 cd curl
 
-set GIT_PATH "C:\Program Files\Git\git.exe"
+set GIT_PATH "C:\Program Files\Git\git-cmd.exe"
 set BRANCH = "origin"
 
 :P
@@ -13,16 +13,16 @@ set /P ACTION=Action: %=%
 
 if "%ACTION%"=="commit" (
   %GIT_PATH% add -A
-
-	%GIT_PATH% commit -am "commited with the Octo commit on %date%"
-
-	%GIT_PATH% push %BRANCH%
+	
+	call git add *
+	call git commit -m "commited with Octo Git on %date%"
+	call git push %BRANCH%
 
 )
 
 if "%ACTION%"=="pull" (
 
-	%GIT_PATH% pull %BRANCH%
+	call git pull %BRANCH%
 
 )
 
