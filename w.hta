@@ -1,0 +1,18 @@
+<head>
+<title>Operating System Version</title>
+<HTA:APPLICATION 
+     APPLICATIONNAME="Operating System Version"
+     SCROLL="yes"
+     SINGLEINSTANCE="yes"
+>
+</head>
+<body>      
+<form>
+<INPUT TYPE="Button" NAME="Commit" VALUE="commit">
+
+      <SCRIPT FOR="commit" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "commit.bat"
+      </SCRIPT>
+</form>
+</body>
