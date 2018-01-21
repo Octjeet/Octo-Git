@@ -12,7 +12,6 @@ set ACTION=
 set /P ACTION=Action: %=%
 
 if "%ACTION%"=="commit" (
-  %GIT_PATH% add -A
 	
 	call git add *
 	call git commit -m "commited with Octo Git on %date%"
