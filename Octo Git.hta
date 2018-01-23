@@ -10,19 +10,37 @@
 
     Sub Window_onLoad
 	
-        window.resizeTo 220,100
+        window.resizeTo 600,215
 
     End Sub 
 
 </SCRIPT>
+<SCRIPT language="JavaScript">
+      function WriteFile() {
+        var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+        var fh = fso.CreateTextFile("c:\\Output.txt", true); 
+        fh.WriteLine(form.message.value);
+        fh.Close(); 
+
+      }
+</SCRIPT>
 </head>
 <body bgcolor="black">      
 <form>
-<INPUT TYPE="Button" NAME="commit" VALUE="Commit">
+<INPUT TYPE="Button" NAME="commit" VALUE="Commit With Default Message">
+<br>
+<INPUT TYPE="Button" NAME="commitTwo" VALUE="Commit With Custom Message" onClick="WriteFile()">
+<INPUT TYPE="text" NAME="message" VALUE="MESSAGE">
+<br>
 <INPUT TYPE="Button" NAME="pull" VALUE="Pull">
+<br>
 <INPUT TYPE="Button" NAME="init" VALUE="Init">
 
 </form>
+      <SCRIPT FOR="commitTwo" EVENT="" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "Octo\commitTwo.bat"
+      </SCRIPT>
 
       <SCRIPT FOR="commit" EVENT="onClick" LANGUAGE="VBScript">
         Set WshShell = CreateObject("WScript.Shell")
