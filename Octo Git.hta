@@ -10,7 +10,7 @@
 
     Sub Window_onLoad
 	
-        window.resizeTo 200,100
+        window.resizeTo 220,100
 
     End Sub 
 
@@ -20,6 +20,7 @@
 <form>
 <INPUT TYPE="Button" NAME="commit" VALUE="Commit">
 <INPUT TYPE="Button" NAME="pull" VALUE="Pull">
+<INPUT TYPE="Button" NAME="init" VALUE="Init">
 
 </form>
 
@@ -31,5 +32,10 @@
       <SCRIPT FOR="pull" EVENT="onClick" LANGUAGE="VBScript">
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "Octo\pull.bat"
+      </SCRIPT>
+
+      <SCRIPT FOR="init" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "Octo\init.bat"
       </SCRIPT>
 </body>
