@@ -2,9 +2,9 @@
 
 cd curls
 
-	set /P id=Enter id: 
+	set /P message=Enter Commit Message: 
 	jstack %id% > jstack.txt
 
 	call git add *
-	call git commit -m "%id%"
+	call git commit -m "%message%"
 	call git push
