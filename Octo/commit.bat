@@ -2,7 +2,7 @@
 
 cd curl
 
-set BRANCH = "origin"
+set BRANCH = "master"
 
 	call git add *
 	call git commit -m "commited with Octo Git on %date%"
