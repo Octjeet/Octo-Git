@@ -38,6 +38,8 @@
 <INPUT TYPE="Button" NAME="makeBranch" VALUE="Make New Branch">
 <br>
 <INPUT TYPE="Button" NAME="switchBranch" VALUE="Switch Branch">
+<br>
+<INPUT TYPE="Button" NAME="updateWithMaster" VALUE="Update With Master">
 
 </form>
 
@@ -76,4 +78,8 @@
         WshShell.Run "Octo\switchBranch.bat"
       </SCRIPT>
 
+      <SCRIPT FOR="updateWithMaster" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "Octo\updatewithMaster.bat"
+      </SCRIPT>
 </body>
